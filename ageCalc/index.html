@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate age</title>
+    <style>
+        body{
+            background-color: #414141;
+        }
+        .main{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box{
+            background-color: beige;
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+        }
+        .box input{
+            width: 100%;
+            height:40px;
+            text-align: center;
+            font-size: 15px;
+        }
+        #age{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <label for="dob" >Enter your date of birth</label>
+            <input type="date" name="" id="dob" >
+            <button onclick="calc()"> CALCULATE</button>
+            <p id="age">You are ---- year and  ---- month and ---- days old</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const dob = document.querySelector("#dob")
+    const para = document.querySelector("#age");
+    
+    function calc(){
+        const hi = dob.value
+        const today = new Date();
+        const age = new Date(today - new Date(hi))
+       
+        para.innerText = ` You are ${age.getFullYear()-1970} year and  ${age.getMonth()} and ${age.getDate()-1} days old`
+    // -1 for day for adjusting index as 1 is first of month
+
+    // -1970 cuz js has date object reference as 1970
+    }
+</script>
+</html>
