@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color : #b7e842
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/f/fa/Church_of_light.jpg) no-repeat;
+    /* background: url(./) no-repeat; */
+    background-size: cover;
+}
+
+.container {
+    border-radius: 25px;
+    width: 40%;
+    padding: 40px;
+    background: transparent;
+    border: 1px dotted black;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px white;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: white;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color);
+    color: rgb(17, 16, 16);
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.inputs input {
+    border-bottom: 2px solid var(--color);
+    
+}
+.inputs input::placeholder{
+    color: white;
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login p{
+    color: white;
+}
+.p {
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
